@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1 style="text-align: center;"> USER INFORMATION </h1>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        input[type=text],
+        [type=email],
+        [type=date] {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        .formConatiner {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+
+            padding: 20px;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        .col-25 {
+            float: left;
+            width: 20%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: left;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+
+        }
+        h3{
+            background-color: darkolivegreen;
+         
+            color: whitesmoke;
+      width: max-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formConatiner">
+        <form action="">
+            <div class="row">
+                <div class="col-25"> First Name : </div>
+                <div class="col-75"><input type="text" name="fname" /> </div>
+            </div>
+            <div class="row">
+                <div class="col-25"> Last Name : </div>
+                <div class="col-75"><input type="text" name="lname" /> </div>
+            </div>
+            <div class="row">
+                <div class="col-25"> Address : </div>
+                <div class="col-75"><input type="text" name="address" /> </div>
+            </div>
+            <div class="row">
+                <div class="col-25"> Email Address: </div>
+                <div class="col-75"> <input type="email" name="email" /> </div>
+            </div>
+            <div class="row">
+                <div class="col-25"> Date Of Birth : </div>
+                <div class="col-75"><input type="date" name="DOB" /> </div>
+            </div>
+            <br> </br>
+            <div>
+                <input type="submit" />
+            </div>
+
+            <br> </br>
+        </form>
+        <br> </br>
+        <hr />
+
+        <h3> Enjoy The Audio Sound</h3>
+
+        <audio controls autoplay >
+            <source src="audio_file_example_OOG_1MG.ogg" type="audio/ogg">
+            <source src="audio_file_MP3_700KB.mp3" type="audio/mpeg">
+
+        </audio>
+        <br> </br>
+        <hr />
+
+        <h3>Enjoy Autoplay Video</h3>
+        <video width="320" height="240" controls autoplay loop>
+            <source src="video_file_MP4_480_1_5MG.mp4" type="video/mp4">
+            <source src="video_file_OGG_480_1_7mg.ogg" type="video/ogg">
+
+        </video>
+        <br> </br>
+        <hr />
+
+        <h3> Draw Two Circle using SVG</h3>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="pink" />
+        </svg>
+        <br>  </br>
+        <hr/>
+
+        <h3> Draw Two Circle using Canvas</h3>
+        <canvas id="myCanvas" width="200" height="150" style="border:2px solid #d3d3d3; background-color: orangered;">
+        </canvas>
+        <canvas id="myCanvas1" width="200" height="150"
+            style="border:1px solid #c3e01b; background-color: lemonchiffon ;">
+        </canvas>
+
+        <script>
+            {/* For First Circle*/ }
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+            {/* For Second Circle*/ }
+            var c = document.getElementById("myCanvas1");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+
+            {/*  Write HTML script to store your first name, last name and date of birth as part of web
+                storage and display the stored local storage content by retrieving it */}
+
+            console.log(localStorage);
+            localStorage.setItem('fname', 'Shikha');
+            localStorage.setItem('lname', 'Gupta');
+            localStorage.setItem('DOB', '12-06-86');
+
+            var Fname = localStorage.getItem('fname');
+            var Lname = localStorage.getItem('lname');
+            var DOB = localStorage.getItem('DOB');
+                     </script>
+
+    </div>
+</body>

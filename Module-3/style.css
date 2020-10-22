@@ -1,0 +1,48 @@
+body{
+background-color: fuchsia;
+margin-left: 20px;
+margin-right: 30px;
+}
+
+h1{
+   font-stretch: extra-expanded;
+    text-align: center;
+}
+
+#p1{
+    text-align: justify;
+    margin-top: 280px;
+    text-decoration: double;
+    font-family:cursive;
+}
+img{
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
+table,th,tr,td{
+    border-color:green;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    table-layout:fixed;
+}
+th{
+    background-color: darkgrey;
+}
+.para{
+font-size: 20px;
+color: navy;
+}
+
+#para1{
+    border-style: solid;
+    
+}
+#para2{
+    border-style: dotted;
+}
+#para3{
+    border-style: dashed;
+}

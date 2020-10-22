@@ -1,0 +1,1 @@
+docker run -p 29090:8080 --name some-nginx -v index.html:/usr/share/nginx/html:ro -v ~/OneDrive/Documentos/Edureka/Module-2/default.conf:/etc/nginx/conf.d/default.conf -d nginx

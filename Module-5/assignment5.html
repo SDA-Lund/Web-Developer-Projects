@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Title> Assignment5</Title>
+    <h1 style="text-align: center;"><u> Handling Events with JavaScript </u></h1>
+    
+</head>
+
+<body>
+    <div>
+        <!-- Write JavaScript to display the  names of computer languages and display all of them in an alert box on click of a button. -->
+        <h2><u> Arrays </u></h2>
+        <h3> To see the lanaguages click on the button</h3>
+        <button onclick="dispalyLanguage()" > Show Me Languages</button>
+        <p id="lang"></p>
+        <script>
+            var language ="<ul>";
+            function dispalyLanguage() {
+                var array = ["C", "C++", "Java", "JavaScript", "C#"]
+                for(var i=0; i<array.length; i++){
+                 language +="<li>" + array[i];
+                }
+              
+                document.getElementById("lang").innerText=language;
+            }
+
+            function alertmessage(){
+                console.log(" You are moving mouse")
+            }
+        </script>
+    </div>
+    <hr/>
+    <div>
+        <!--Write  JavaScript  to  store  the  employee  object  information  (Employee  name, employee no, age and department) and display as Employee <name> is working in  <department>  department. Here  <name>  is  name  of  the  employee  and <department> is the stored employee's department-->
+        <h2> <u>Object</u>  </h2>
+        <h2>Empolyee Details</h3>
+        <p id="details"></p>
+
+<script>
+    var Employee = {
+        id:123,
+        name: "Mr.Johan Thomas",
+        age:34,
+        Department:"IT"
+    }
+ 
+    document.getElementById("details").innerHTML= "Employee " +Employee.name +" is working in" +Employee.Department +" Department.";
+</script>
+</div>
+<hr/>
+<div>
+    <h3><u> Event handlers</u> </h3>
+    <!--»Write JavaScript to display an alert message "You have moved the mouse on the button" whenthe mouse is moved on a button-->
+
+    <button onmouseover="alert('You are moving mouse')"> Alert Me</button>
+</div>
+<hr/>
+<h3> IF Condition</h3>
+<!-- Write  JavaScript  to  accept  a  name  in  prompt  and  validate  whether  name  is entered  or not. If the  name  is not entered  then  display a message  "Sorry, you have  not  entered  any name". If  the  name is  entered  by the  user  then  display "Hello <entered name>, welcome".  Here <entered name> is the name entered by the user-->
+    <p> Please enter your name</p>
+    <button onclick="msg()"> Click me!</button>
+    <p id="display"></p>
+    <Script>
+        function msg(){
+            var name= prompt("Please enter your name");
+            if(name==null){
+                document.getElementById("display").innerHTML="Sorry, you have not entered any name";
+            }
+            else{
+               document.getElementById("display").innerHTML="Hello, " +name +" welcome";
+            }
+        }
+    </Script>
+</body>
+
+</html>
